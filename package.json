@@ -9,6 +9,7 @@
   "dependencies": {
     "axios": "^0.21.0",
     "generator-serverless-policy": "^3.1.0",
+    "roman-numerals": "^0.3.2",
     "source-map-support": "^0.5.10",
     "words-to-numbers": "^1.5.1"
   },

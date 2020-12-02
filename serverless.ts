@@ -1,12 +1,11 @@
 import type { Serverless } from 'serverless/aws';
 
 const serverlessConfiguration: Serverless = {
-  service: {
-    name: 'challenge',
+  service: 'challenge',
     // app and org for use with dashboard.serverless.com
     // app: your-app-name,
     // org: your-org-name,
-  },
+
   frameworkVersion: '2',
   custom: {
     webpack: {
@@ -29,10 +28,10 @@ const serverlessConfiguration: Serverless = {
     },
   },
   functions: {
-    hello: {
-      handler: 'handler.videoGame',
-
-    }
+    videoGameInfo: {
+      handler: 'handler.getInfo',
+	    memorySize: 128
+    },
   }
 }
 
