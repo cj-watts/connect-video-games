@@ -4,7 +4,8 @@
   "description": "Serverless webpack example using Typescript",
   "main": "handler.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -r ts-node/register tests/**/*.test.ts",
+    "coverage": "nyc -r text -e .ts -x \"tests/*.test.ts\" npm run test"
   },
   "dependencies": {
     "axios": "^0.21.0",
@@ -14,11 +15,18 @@
     "words-to-numbers": "^1.5.1"
   },
   "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@types/aws-lambda": "^8.10.17",
+    "@types/chai": "^4.2.14",
+    "@types/mocha": "^8.0.4",
     "@types/node": "^10.12.18",
     "@types/serverless": "^1.72.5",
+    "chai": "^4.2.0",
     "fork-ts-checker-webpack-plugin": "^3.0.1",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0",
     "serverless-webpack": "^5.2.0",
+    "sinon": "^9.2.1",
     "ts-loader": "^5.3.3",
     "ts-node": "^8.10.2",
     "typescript": "^3.2.4",
